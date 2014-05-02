@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.min.css">
-    <script type="text/javascript" src="js/vendor/modernizr.min.js"></script>
+    <link rel="stylesheet" href="/css/style.min.css">
+    <script type="text/javascript" src="/js/vendor/modernizr.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -55,12 +55,14 @@
           </div>
           <hr>
           <div class="alert alert-info col-lg-10">When you see one of the above icons in the address bar, you can toggle on it to turn Heartbleed Search ON or OFF</div>
+          <hr>
+          <a class="btn btn-primary" href="http://heartbleedsearch.uservoice.com" target="_blank">User Feedback for Heartbleed Search</a>
         </div>
         <div class="col-sm-4 col-sm-offset-1">
           <h2 class="text-center"><span class="icon-link"></span> Link Status</h2>
           <div class="media">
             <div class="pull-left">
-              <div class="img-circle img-thumbnail bg-default"><img src="images/icon-nok48.png" alt="BAD" ></div>
+              <div class="img-circle img-thumbnail bg-default"><img src="/images/icon-nok48.png" alt="BAD" ></div>
             </div>
             <div class="media-body">
               <h4 class="media-heading">Vulnerable to Heartbleed</h4>
@@ -69,7 +71,7 @@
           </div>
           <div class="media">
             <div class="pull-left">
-              <div class="img-circle img-thumbnail bg-default"><img src="images/icon-ok48.png" alt="OK" ></div>
+              <div class="img-circle img-thumbnail bg-default"><img src="/images/icon-ok48.png" alt="OK" ></div>
             </div>
             <div class="media-body">
               <h4 class="media-heading">Site tested Ok!</h4>
@@ -78,7 +80,7 @@
           </div>
           <div class="media">
             <div class="pull-left">
-              <div class="img-circle img-thumbnail bg-default"><img src="images/icon-err48.png" alt="ERR" ></div>
+              <div class="img-circle img-thumbnail bg-default"><img src="/images/icon-err48.png" alt="ERR" ></div>
             </div>
             <div class="media-body">
               <h4 class="media-heading">Cannot be tested. Use Caution!</h4>
@@ -89,7 +91,7 @@
       </div>
       <hr>
       <div>
-        <h4 class="text-center"> Brought to you by <a class="btn btn-default btn-sm" href="//twitter.com/3_alves" target="_blank">Tony Alves <span class="icon-twitter"></span></a> &copy; <a class="btn btn-primary btn-sm" href="http://www.heartbleedsearch.com" target="_blank">HeartbleedSearch.com</a></h4>
+        <h4 class="text-center"> Brought to you by <a class="btn btn-default btn-sm" href="//twitter.com/3_alves" target="_blank">Tony Alves <span class="icon-twitter"></span></a> &copy; 2014, <a class="btn btn-primary btn-sm" href="http://www.heartbleedsearch.com" target="_blank">HeartbleedSearch.com</a></h4>
         <h4 class="text-center"> Heartbleed check made available by <a class="btn btn-default btn-sm" href="//twitter.com/FiloSottile" target="_blank">Filippo Valsorda <span class="icon-twitter"></span></a>  at <a class="btn btn-primary btn-sm" href="https://filippo.io/Heartbleed/" target="_blank">Filippo.io <span class="icon-thumbs-up"></span></a></h4>
 
       </div>
@@ -101,8 +103,36 @@
     </div>
     <!-- Javascript should always be put at the end of the body to allow page to load even faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js")"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js")"><\/script>')</script>
     <script src="js/main.min.js"></script>
+    <script>
+   // Include the UserVoice JavaScript SDK (only needed once on a page)
+         UserVoice = window.UserVoice || [];
+         (function() {
+           var uv = document.createElement('script');
+           uv.type = 'text/javascript';
+           uv.async = true;
+           uv.src = '//widget.uservoice.com/iQL9dI5nH7qe4c6sTaezOg.js';
+           var s = document.getElementsByTagName('script')[0];
+           s.parentNode.insertBefore(uv, s)
+         })();
+   // Set colors
+         UserVoice.push(['set', {
+             accent_color: '#9e1f21',
+             trigger_color: 'white',
+             trigger_background_color: 'rgba(46, 49, 51, 0.6)'
+           }]);
+
+   // Identify the user and pass traits
+   // To enable, replace sample data with actual user traits and uncomment the line
+         UserVoice.push(['identify', {
+           }]);
+
+   // Add default trigger to the bottom-right corner of the window:
+         UserVoice.push(['addTrigger', {mode: 'contact', trigger_position: 'top-right'}]);
+   // Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
+         UserVoice.push(['autoprompt', {}]);
+    </script>   
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b, o, i, l, e, r) {
