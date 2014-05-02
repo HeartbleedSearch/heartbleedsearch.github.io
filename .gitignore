@@ -1,0 +1,6 @@
+_site
+Gemfile.lock
+/nbproject
+/node_modules
+/_files/vendor
+/dev
