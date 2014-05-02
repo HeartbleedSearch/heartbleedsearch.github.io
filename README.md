@@ -1,3 +1,5 @@
 Heartbleed Search Site
 ==========================
-This site is open source, but the source is bound by our [license found here](http://www.heartbleedsearch.com/license/)
+This website is open source. 
+
+The source and use of the extension are bound by our [License and Terms found here](http://www.heartbleedsearch.com/license/)

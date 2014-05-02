@@ -1,4 +1,4 @@
 ---
 layout: default_home
-title: Chrome Extension
+title: "Chrome Extension"
 ---
