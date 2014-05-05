@@ -5,7 +5,8 @@ $(document).ready(function(event) {
 $(window).on('hashchange', function() {
   //console.log("------------ hashchange -------------");
 });
-if (chrome.app.isInstalled) {
+var installedExt = document.getElementById('extension-is-installed');
+if (installedExt) {
   document.getElementById('install-button').style.display = 'none';
   document.getElementById('rate-button').style.display = 'inline';
 } else {
