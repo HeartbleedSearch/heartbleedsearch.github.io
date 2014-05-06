@@ -1,7 +1,7 @@
 
 $(document).ready(function(event) {
   //console.log("------------ DOM loaded -------------");
-  checkForInstalledExt();
+  setTimeout(checkForInstalledExt,2000);  //allow time for extension to place object
 });
 $(window).on('hashchange', function() {
   //console.log("------------ hashchange -------------");
