@@ -11,8 +11,9 @@ function checkForInstalledExt() {
   var installedExt = document.getElementById('extension-is-installed');
   var installButton = document.getElementById('install-button');
   var rateButton = document.getElementById('rate-button');
-  if (chrome && installButton !== undefined && rateButton !== undefined) {
-    if (installedExt !== undefined) {
+  console.log(installedExt);
+  if (chrome && installButton !== null && rateButton !== null) {
+    if (installedExt !== null) {
       installButton.style.display = 'none';
       rateButton.style.display = 'inline';
     } else {
