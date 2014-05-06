@@ -1,7 +1,7 @@
 
 $(document).ready(function(event) {
   //console.log("------------ DOM loaded -------------");
-  setTimeout(checkForInstalledExt,2000);  //allow time for extension to place object
+  setTimeout(checkForInstalledExt,1000);  //allow time for extension to place object
 });
 $(window).on('hashchange', function() {
   //console.log("------------ hashchange -------------");
@@ -12,7 +12,7 @@ function checkForInstalledExt() {
   var installButton = document.getElementById('install-button');
   var rateButton = document.getElementById('rate-button');
   if (chrome && installButton !== undefined && rateButton !== undefined) {
-    if (installedExt === undefined) {
+    if (installedExt !== undefined) {
       installButton.style.display = 'none';
       rateButton.style.display = 'inline';
     } else {
